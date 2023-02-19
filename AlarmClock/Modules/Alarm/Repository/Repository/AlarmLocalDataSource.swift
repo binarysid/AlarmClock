@@ -1,6 +1,6 @@
 //
 //  AlarmLocalDataSource.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 28/1/23.
 //

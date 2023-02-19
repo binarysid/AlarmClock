@@ -1,6 +1,6 @@
 //
 //  TimerViewConfigurator.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 26/1/23.
 //
@@ -15,9 +15,9 @@ struct TimerViewConfigurator:ViewConfigurator{
     }
     private func registerDependency(){
         let container = DIContainer.shared
-        container.register(type: TimerInputValidatorProtocol.self, component: TimerInputValidator())
-        container.register(type: TimerDataProcessorProtocol.self, component: TimerDataProcessor())
+        container.register(type: TimerInputValidatorUseCaseProtocol.self, component: TimerInputValidatorUseCase())
+        container.register(type: TimerRepositoryProtocol.self, component: TimerRepository())
         container.register(type: TimerWatchable.self, component: CountDownEngine())
-        container.register(type: CountDownUseCaseProtocol.self, component: TimerUseCase(queue: OperationQueue()))
+        container.register(type: CountDownUseCaseProtocol.self, component: TimerCountDownUseCase(queue: OperationQueue()))
     }
 }

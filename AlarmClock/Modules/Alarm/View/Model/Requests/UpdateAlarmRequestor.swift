@@ -1,6 +1,6 @@
 //
 //  UpdateAlarmRequestor.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 29/1/23.
 //

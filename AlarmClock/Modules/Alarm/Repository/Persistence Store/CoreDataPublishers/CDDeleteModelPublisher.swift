@@ -1,6 +1,6 @@
 //
 //  CDDeleteModelPublisher.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 30/1/23.
 //

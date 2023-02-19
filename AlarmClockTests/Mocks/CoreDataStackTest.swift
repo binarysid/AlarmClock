@@ -1,6 +1,6 @@
 //
 //  CoreDataStackTest.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 30/1/23.
 //
@@ -8,7 +8,7 @@
 
 import XCTest
 import CoreData
-@testable import HugeClock
+@testable import AlarmClock
 
 final class CoreDataStackTest{
     static let shared = CoreDataStackTest()

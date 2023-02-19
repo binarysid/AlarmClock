@@ -1,6 +1,6 @@
 //
 //  TimerUseCase.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 27/1/23.
 //
@@ -13,10 +13,9 @@ enum TimerState{
 }
 
 // This class validates data, process presentable format, monitor the stopwatch and sends update to View Model.
-final class TimerUseCase:CountDownUseCaseProtocol{
-    @Inject private var validator:TimerInputValidatorProtocol
-    @Inject private var  dataProcessor:TimerDataProcessorProtocol
-    @Inject private var  stopWatch:TimerWatchable
+final class TimerCountDownUseCase:CountDownUseCaseProtocol{
+    @Inject private var repository:TimerRepositoryProtocol
+    @Inject private var stopWatch:TimerWatchable
     let queue: OperationQueue
     var cancellable = Set<AnyCancellable>()
     var publisher:PassthroughSubject<TimerViewData?,Never> = .init()
@@ -30,12 +29,6 @@ final class TimerUseCase:CountDownUseCaseProtocol{
          queue: OperationQueue
     ) {
         self.queue = queue
-    }
-    
-    func validateInput(hour:String,minute:String,second:String, upto hourLimit:Int)->Bool{
-        guard let input = validator.validate(hour: hour, minute: minute, second: second, upto: hourLimit) else{return false}
-        dataProcessor.createModelData(from: input)
-        return true
     }
     
     func startTimer(){
@@ -55,8 +48,11 @@ final class TimerUseCase:CountDownUseCaseProtocol{
     func getCurrentState()->TimerState{
         state
     }
+    func buildModelData(from item: TimerValidDataFormat) {
+        repository.createModelData(from: item)
+    }
 }
-extension TimerUseCase{
+extension TimerCountDownUseCase{
     
     private func onChange(state:TimerState){
         switch state {
@@ -74,7 +70,7 @@ extension TimerUseCase{
     }
     
     private func initializeTime(){
-        guard let totalTime = dataProcessor.getModelData()?.totalTimeInSec else{
+        guard let totalTime = repository.getModelData()?.totalTimeInSec else{
             return
         }
         stopWatch.setEndTime(from: totalTime, to: Date())

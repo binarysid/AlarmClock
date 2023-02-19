@@ -1,13 +1,17 @@
 //
 //  MockAlarrmViewModel.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 30/1/23.
 //
 
-@testable import HugeClock
+@testable import AlarmClock
 
 final class MockAlarmViewModel:AlarmViewOutput{
+    func updateData(with request: AlarmClock.UpdateAlarmRequestor) {
+        
+    }
+    
     
     func showAlarmList(data: [AlarmViewData]) {
         

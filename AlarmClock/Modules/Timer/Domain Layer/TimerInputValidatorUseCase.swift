@@ -1,12 +1,12 @@
 //
 //  TimerInputValidator.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 26/1/23.
 //
 
 // Validates user input
-final class TimerInputValidator:TimerInputValidatorProtocol{
+final class TimerInputValidatorUseCase:TimerInputValidatorUseCaseProtocol{
     func validate(hour:String,minute:String,second:String, upto hourLimit:Int)->TimerValidDataFormat?{
         guard let hours = Int(hour), let minutes = Int(minute),
               let seconds = Int(second) else{return nil}

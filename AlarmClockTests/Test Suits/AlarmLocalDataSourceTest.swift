@@ -1,6 +1,6 @@
 //
 //  LocalDataSourceTest.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 26/1/23.
 //
@@ -8,7 +8,7 @@
 import XCTest
 import CoreData
 import Combine
-@testable import HugeClock
+@testable import AlarmClock
 
 class AlarmLocalDataSourceTest: XCTestCase {
     var sut: AlarmLocalDataSource!
@@ -40,11 +40,11 @@ class AlarmLocalDataSourceTest: XCTestCase {
                     .sink(receiveCompletion: {completion in
                         if case .failure(let error) = completion,error == .NoDataFound{
                             XCTFail("Alarm data fetch failed")
-                            expectation.fulfill()
+                            self.expectation.fulfill()
                         }
                     }, receiveValue: {data in
                         XCTAssert(data.count>0, "No Alarm List found")
-                        expectation.fulfill()
+                        self.expectation.fulfill()
                     })
                     .store(in: &cancellable)
             case .failure(_):

@@ -1,6 +1,6 @@
 //
 //  TimeZoneData.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 10/2/23.
 //

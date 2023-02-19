@@ -1,12 +1,12 @@
 //
 //  TimerDataPresenter.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 26/1/23.
 //
 
 // This class prepares data for domain operation and view purpose
-final class TimerDataProcessor:TimerDataProcessorProtocol{
+final class TimerRepository:TimerRepositoryProtocol{
     private var data:TimerModelData?
     
     func createModelData(from item: TimerValidDataFormat){
@@ -23,7 +23,7 @@ final class TimerDataProcessor:TimerDataProcessorProtocol{
 }
 
 // MARK: calculations
-extension TimerDataProcessor{
+extension TimerRepository{
     func getTotalSecondsFrom(hour:Int,minute:Int,second:Int)->Int{
         return (hour*3600)+(minute*60)+second
     }

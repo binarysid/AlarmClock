@@ -1,12 +1,12 @@
 //
 //  MockAlarmRequestorData.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 30/1/23.
 //
 
 import Foundation
-@testable import HugeClock
+@testable import AlarmClock
 
 struct MockAlarmRequestorData{
     static func getMocks()->[CreateAlarmRequestor]{

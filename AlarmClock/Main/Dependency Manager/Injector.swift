@@ -1,6 +1,6 @@
 //
 //  Injector.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 18/2/23.
 //

@@ -1,13 +1,13 @@
 //
-//  HugeClockUITestsLaunchTests.swift
-//  HugeClockUITests
+//  AlarmClockUITestsLaunchTests.swift
+//  AlarmClockUITests
 //
 //  Created by Linkon Sid on 24/1/23.
 //
 
 import XCTest
 
-class HugeClockUITestsLaunchTests: XCTestCase {
+class AlarmClockUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

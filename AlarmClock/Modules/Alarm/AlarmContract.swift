@@ -1,6 +1,6 @@
 //
 //  AlarmContract.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 15/2/23.
 //

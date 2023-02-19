@@ -1,12 +1,12 @@
 //
 //  ClockDataSourceTest.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 28ß/1/23.
 //
 
 import XCTest
-@testable import HugeClock
+@testable import AlarmClock
 
 class ClockDataSourceTest: XCTestCase {
     var sut: ClockLocalDataSource!

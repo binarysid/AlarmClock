@@ -1,6 +1,6 @@
 //
 //  TimerModelData.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 26/1/23.
 //

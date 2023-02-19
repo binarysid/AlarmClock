@@ -1,6 +1,6 @@
 //
 //  ClockFetchDataUseCase.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 11/2/23.
 //

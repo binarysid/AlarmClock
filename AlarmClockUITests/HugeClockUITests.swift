@@ -1,13 +1,13 @@
 //
-//  HugeClockUITests.swift
-//  HugeClockUITests
+//  AlarmClockUITests.swift
+//  AlarmClockUITests
 //
 //  Created by Linkon Sid on 24/1/23.
 //
 
 import XCTest
 
-class HugeClockUITests: XCTestCase {
+class AlarmClockUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

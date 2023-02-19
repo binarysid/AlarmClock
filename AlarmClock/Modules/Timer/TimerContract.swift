@@ -1,6 +1,6 @@
 //
 //  TimerContract.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 19/2/23.
 //
@@ -23,11 +23,11 @@ protocol TimerViewModelProtocol:ObservableObject {
 
 protocol CountDownUseCaseProtocol{
     var publisher:PassthroughSubject<TimerViewData?,Never>{get}
-    func validateInput(hour:String,minute:String,second:String, upto hourLimit:Int)->Bool
     func startTimer()
     func setState(state:TimerState)
     func reset()
     func getCurrentState()->TimerState
+    func buildModelData(from item: TimerValidDataFormat)
 }
 
 protocol TimerWatchable{
@@ -38,12 +38,12 @@ protocol TimerWatchable{
     func pause()
 }
 
-protocol TimerDataProcessorProtocol{
+protocol TimerRepositoryProtocol{
     func createModelData(from item: TimerValidDataFormat)
     func updateModelData(from item:TimerValidDataFormat)
     func getModelData()->TimerModelData?
 }
 
-protocol TimerInputValidatorProtocol{
+protocol TimerInputValidatorUseCaseProtocol{
     func validate(hour:String,minute:String,second:String, upto hourLimit:Int)->TimerValidDataFormat?
 }

@@ -1,19 +1,19 @@
 //
 //  TimerInputValidationTest.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 28/1/23.
 //
 
 import XCTest
-@testable import HugeClock
+@testable import AlarmClock
 
 class TimerInputValidationTest: XCTestCase {
-    var sut:TimerInputValidator!
+    var sut:TimerInputValidatorUseCase!
     
     override func setUp() {
         super.setUp()
-        sut = TimerInputValidator()
+        sut = TimerInputValidatorUseCase()
     }
 
     override func tearDown() {

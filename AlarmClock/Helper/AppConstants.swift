@@ -1,6 +1,6 @@
 //
 //  AppConstants.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 28/1/23.
 //
@@ -10,7 +10,7 @@ import Foundation
 struct AppConstants{
     
     enum Common{
-        static let AppTitle = "HugeClock"
+        static let AppTitle = "AlarmClock"
         static let SplashImage = "deskclock.fill"
     }
     struct TabItem{

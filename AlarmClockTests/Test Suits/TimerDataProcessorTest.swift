@@ -1,19 +1,19 @@
 //
 //  TimerDataProcessorTest.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 27/1/23.
 //
 
 import XCTest
-@testable import HugeClock
+@testable import AlarmClock
 
 class TimerDataProcessorTest: XCTestCase {
-    var sut:TimerDataProcessor!
+    var sut:TimerRepository!
     
     override func setUp() {
         super.setUp()
-        sut = TimerDataProcessor()
+        sut = TimerRepository()
     }
 
     override func tearDown() {

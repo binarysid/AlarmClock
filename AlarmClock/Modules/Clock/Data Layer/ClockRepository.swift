@@ -1,6 +1,6 @@
 //
 //  ClockRepository.swift
-//  HugeClock
+//  AlarmClock
 //
 //  Created by Linkon Sid on 27/1/23.
 //

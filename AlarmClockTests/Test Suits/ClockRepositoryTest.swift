@@ -1,17 +1,17 @@
 //
 //  ClockRepositoryTest.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 28/1/23.
 //
 
 import XCTest
-@testable import HugeClock
+@testable import AlarmClock
 
 class ClockRepositoryTest: XCTestCase {
     var sut:ClockRepository!
     override class func setUp() {
-        DIManager.shared.registerClockDataSource()
+        DIContainer.shared.register(type: ClockDataSource.self, component: ClockLocalDataSource())
     }
     override func setUp() {
         super.setUp()

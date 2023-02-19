@@ -1,6 +1,6 @@
 //
 //  AlarmPresenterTest.swift
-//  HugeClockTests
+//  AlarmClockTests
 //
 //  Created by Linkon Sid on 30/1/23.
 //
@@ -9,7 +9,7 @@ import XCTest
 import Combine
 import CoreData
 
-@testable import HugeClock
+@testable import AlarmClock
 
 class AlarmPresenterTest: XCTestCase {
     var sut:AlarmPresenter!
